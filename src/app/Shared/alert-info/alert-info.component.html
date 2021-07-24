@@ -1,0 +1,122 @@
+
+
+<div [class]="BodyClass" *ngIf="message">
+  <div [class]="WarningClass" *ngIf="message.type==2" tabindex="-1" role="dialog"
+  aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content alertmodal-div">
+
+          <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+              <i class="fas fa-times"></i>
+          </button>
+
+          <span><i class="fas fa-exclamation"></i></span>
+          <h6>WARNING</h6>
+          <p>{{message.text}}</p>
+          <div class="row justify-content-center">
+            <div class="col-12"><button class="okbtn" (click)="message.closeFn()">OK</button></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div [class]="WarningClass" *ngIf="message.type==1" tabindex="-1" role="dialog"
+aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content alertmodal-div">
+
+        <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <span><i class="far fa-check-circle"></i></span>
+        <h6>SUCCESS</h6>
+        <p>{{message.text}}</p>
+        <div class="row justify-content-center">
+          <div class="col-12"><button class="okbtn" (click)="message.closeFn()">OK</button></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div [class]="WarningClass" *ngIf="message.type==3" tabindex="-1" role="dialog"
+aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content alertmodal-div">
+
+        <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <h6>ERROR</h6>
+        <p>{{message.text}}</p>
+        <div class="row justify-content-center">
+          <div class="col-12"><button class="okbtn" (click)="message.closeFn()">OK</button></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div [class]="WarningClass" *ngIf="message.type==4" tabindex="-1" role="dialog"
+aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content alertmodal-div">
+
+        <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <span><i class="far fa-thumbs-up"></i></span>
+        <h6>Confirmation</h6>
+        <p [innerHtml]="message.text"></p>
+        <!-- <button class="okbtn" (click)="message.yesFn()">PROCEED</button> -->
+        <div class="row justify-content-center">
+          <div class="col-6"><button class="okbtn" (click)="message.yesFn()">OK</button></div>
+          <div class="col-6"><button class="okbtn" (click)="message.closeFn()">Close</button></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div [class]="WarningClass" *ngIf="message.type==5" tabindex="-1" role="dialog"
+aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content alertmodal-div">
+
+        <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <span><i class="far fa-check-circle"></i></span>
+        <h6>Success</h6>
+        <p [innerHtml]="message.text"></p>
+        <div class="row justify-content-center">
+          <div class="col-6"><button class="okbtn" (click)="message.yesFn()">OK</button></div>
+          <div class="col-6"><button class="okbtn" (click)="message.closeFn()">Close</button></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div [class]="WarningClass" *ngIf="message.type==6" tabindex="-1" role="dialog"
+  aria-labelledby="mySmallModalLabel" [style]="StyleClass"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content alertmodal-div">
+
+          <!-- <button type="button" class="close" data-dismiss="modal" (click)="message.closeFn()" aria-label="Close">
+              <i class="fas fa-times"></i>
+          </button> -->
+
+          <span><i class="far fa-thumbs-up"></i></span>
+          <h6>Continue</h6>
+          <p>{{message.text}}</p>
+          <div class="row justify-content-center">
+            <div class="col-12"><button class="okbtn" (click)="message.closeFn()">Continue</button></div>
+        </div>
+      </div>
+  </div>
+</div>
+<div [class]="BackFade"></div> 
+</div>
+ 

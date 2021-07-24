@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+     <ion-button (click)="Back()">
+      <ion-icon name="arrow-back"></ion-icon>
+     </ion-button>
+    </ion-buttons>
+    
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label position="floating">Name *</ion-label>
+      <ion-input [(ngModel)]="user.Name">
+  
+      </ion-input>
+    </ion-item>
+  </ion-col>
+ 
+</ion-row>
+ 
+
+</ion-content>
+<ion-footer>
+  <ion-button (click)="Submit()" expand="block" color="danger" shape="round">
+    Save
+  </ion-button>
+</ion-footer>

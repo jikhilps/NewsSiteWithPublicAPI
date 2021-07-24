@@ -1,0 +1,77 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<ion-content>
+  
+  
+  <div class="background">
+    <!-- header shape -->
+
+    <div class="custom-shape-divider-top-1616825631">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+      </svg>
+    </div>
+
+    <app-alert-info></app-alert-info>
+
+    <!-- label -->
+    <div class="label2"><label *ngIf="Islogin">LOGIN</label><label *ngIf="Isregister">Register</label></div>
+
+    <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#FF0066"
+        d="M20.4,-35C22.8,-26.4,18.6,-15.5,21.4,-6.9C24.3,1.7,34.1,8,38.5,18.1C42.9,28.3,41.9,42.3,34.6,48.2C27.2,54.2,13.6,52.1,2.8,48.2C-7.9,44.2,-15.9,38.5,-31.3,35.2C-46.7,31.8,-69.6,30.9,-80.4,20.7C-91.3,10.4,-90.1,-9.2,-76.7,-17.1C-63.4,-24.9,-37.9,-21,-23.1,-25.6C-8.3,-30.2,-4.1,-43.4,2.4,-46.8C9,-50.2,18,-43.7,20.4,-35Z"
+        transform="translate(100 100)" />
+    </svg>
+
+
+
+
+    <!-- input boxes -->
+    <div *ngIf="Islogin">
+      <div class="contain">
+        <div class="wrap">
+          <ion-input class="input" type="text" [(ngModel)]="user.Email" placeholder="Email"></ion-input>
+        </div>
+
+        <div class="wrap">
+          <ion-input class="input" type="text" [(ngModel)]="user.Password" placeholder="Password"></ion-input>
+        </div>
+      </div>
+      
+      <div class="buttondiv">
+        <button class="btn-grad" (click)=" Login()">Login</button>
+      </div><br />
+
+      <p style="text-align: center;cursor: pointer;" (click)="ToggleControl(2)">SIGNUP</p>
+    </div>
+
+    <div *ngIf="Isregister">
+      <div class="contain">
+        <div class="wrap">
+          <ion-input class="input" type="text" [(ngModel)]="user.Name" placeholder="Name*"></ion-input>
+        </div>
+
+        <div class="wrap">
+          <ion-input class="input" type="text"  [(ngModel)]="user.Email" placeholder="Email*"></ion-input>
+        </div>
+        <div class="wrap">
+          <ion-input class="input" type="text" max-length="20" [(ngModel)]="user.Password" placeholder="Password*"></ion-input>
+        </div>
+        
+      </div>
+      <!-- SAVE  -->
+      <div class="buttondiv">
+        <button class="btn-grad" (click)="Register()">Register</button>
+      </div>
+
+      <p style="text-align: center;cursor: pointer;margin-top: 5px;" (click)="ToggleControl(1)">LOGIN</p>
+    </div>
+
+
+
+    <!-- footer -->
+    
+  </div>
+ 
+</ion-content>

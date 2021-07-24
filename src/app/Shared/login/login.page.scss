@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  ion-content {
+  --background: rgb(58,77,180);
+  --background: linear-gradient(45deg, rgba(58,77,180,1) 0%, rgba(29,207,253,1) 52%, rgba(69,252,138,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    font-family: 'Roboto Slab', serif;
+    opacity: 1;
+  
+  .custom-shape-divider-top-1616825631 {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  .custom-shape-divider-top-1616825631 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+  }
+  
+  .custom-shape-divider-top-1616825631 .shape-fill {
+    fill:#ff006649;
+  }
+  
+  // custom on page
+  .blob{
+    z-index: -1;
+    position:absolute;
+    width: 600px;
+    opacity: 0.3;
+    left: 35%;
+    top: 0;
+  
+  }
+  
+  .contain{
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrap{
+    font-family: 'Roboto Slab', serif;
+    display: block;
+    margin : 0 auto;
+    background-color: rgba(216, 216, 233, 0.178);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.507);
+    margin-bottom: 20px;
+    box-shadow: 0px 15px 3px 0px rgba(7, 7, 7, 0.15);
+    text-align: center;
+    width: 40%;
+    min-width: 340px;
+    opacity: 1;
+  }
+  
+  .label2{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.664);
+    font-weight: bold;
+  }
+  
+  .buttondiv{
+    text-align: center;
+  }
+  
+  .btn-grad {background-image: linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%)}
+  .btn-grad {
+     margin: auto;
+     margin-left: 10px;
+     margin-top: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: bold;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: rgb(92, 62, 62);
+     box-shadow: 0 0 10px rgb(92, 83, 83);
+     border: 1px solid rgba(255, 255, 255, 0.507);
+     border-radius: 10px;
+     outline: none;
+   }
+  
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+  
+  // content end
+  }

@@ -1,0 +1,60 @@
+<ion-header color="primary">
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="ChangePassword()">
+        <ion-icon name="settings"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+
+  <ion-card class="container">
+  
+  
+    <ion-card-header >
+      <div  class="ion-text-center" >
+        <ion-icon   class="profile-icon" name="person-circle-outline"></ion-icon>
+      </div>
+
+
+      <ion-card-title class="ion-text-center">{{user.Name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="ion-text-center">
+        <ion-chip >
+          <ion-label color="danger">{{user.Email}}</ion-label>
+        </ion-chip>
+        </div>  
+     
+    </ion-card-content>
+  
+      <ion-button color='danger' id='edit' class="icon-only" (click)='EditName()'>
+        <ion-icon  class="edit-icon"  name="create-outline"></ion-icon>
+      </ion-button>
+   
+    
+   
+  </ion-card>
+    
+
+  <app-alert-info></app-alert-info>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color='danger' (click)="DeleteAccount()" expand="block" fill="clear" shape="round">
+      Delete Account
+     </ion-button>
+  </ion-toolbar>
+</ion-footer>
